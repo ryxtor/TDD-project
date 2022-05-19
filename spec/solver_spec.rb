@@ -31,4 +31,19 @@ describe Solver do
       expect { Solver.new.reverse(2) }.to raise_error(ArgumentError)
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(15)).to eql('fizzbuzz')
+    end
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(5)).to eql('buzz')
+    end
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(3)).to eql('fizz')
+    end
+    it 'Should return the result' do
+      expect(@solver.fizzbuzz(2)).to eql("2")
+    end
+  end
 end
